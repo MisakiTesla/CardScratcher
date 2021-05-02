@@ -17,7 +17,6 @@ public class CardScratcher : MonoBehaviour
     private bool _isTouching = false;
 
     private float _progress = 1f;
-    private bool _isInAera = false;
     public float Progress => _progress;
 
     public event Action OnScratchStart; 

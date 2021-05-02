@@ -161,6 +161,12 @@ public class CardScratcher : MonoBehaviour
         return ((oldValue - oldMin) / (oldMax - oldMin)) * (newMax - newMin) + newMin;
     }
 
+    private void OnDestroy()
+    {
+        _texture.Release();
+        _tmptexture.Release();
+    }
+
     private void OnGUI()
     {
         if (GUI.Button(new Rect(new Vector2(100,Screen.height - 100), new Vector2(200, 100)), "ClearToBlack"))
